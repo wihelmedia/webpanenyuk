@@ -6,6 +6,22 @@ $(window).ready(function () {
         scrollTop: ybs.offset().top - 150
         },1250, 'easeInOutExpo');
         e.preventDefault();
+     }); 
+    $('.navbar-brand').click(function (e) {
+        let href = $(this).attr('href');
+        let ybs = $(href);
+        $('html,body').animate({
+            scrollTop: ybs.offset().top - 150
+        }, 1250, 'easeInOutExpo');
+        e.preventDefault();
+    });
+    $('.page-scroll').click(function (e) {
+        let href = $(this).attr('href');
+        let ybs = $(href);
+        $('html,body').animate({
+            scrollTop: ybs.offset().top - 150
+        }, 1250, 'easeInOutExpo');
+        e.preventDefault();
     });
 
     $('.jumbotron .display-4').addClass('show', function () {
@@ -13,22 +29,25 @@ $(window).ready(function () {
     });
     $(this).scroll(function () {
         let wScroll = $(this).scrollTop();
-        if (wScroll > $('.about').offset().top -500) {
-            $('.about h2').addClass('showh2 ', function () {
+        if (wScroll > $('.feature').offset().top -500) {
+            $('.feature h2').addClass('showh2 ', function () {
                 $(this).fadeIn('slow');
             });
-            $('.about p').addClass('showp ', function () {
+            $('.feature p').addClass('showp ', function () {
                 $(this).fadeIn('slow');
             });
         } 
         $('.jumbotron .display-4').css({
-            'transform': 'translate(0px, ' + wScroll / 4 + '%)'
+            'transform': 'translate(0px, ' + wScroll / -4 + '%)'
         });
         $('.jumbotron .lead').css({
-            'transform': 'translate(0px, ' + wScroll / 2 + '%)'
+            'transform': 'translate(0px, ' + wScroll / -2 + '%)'
         });
         $('.jumbotron .floor').css({
-            'transform': 'translate(0px, ' + wScroll / 1.2 + '%)'
+            'transform': 'translate(0px, ' + wScroll / -1.2 + '%)'
+        });
+        $('.fastom').css({
+            'transform': 'translate(0px, ' + wScroll / -1 + '%)'
         });
 
         let navbar = $('.navbar').offset().top;

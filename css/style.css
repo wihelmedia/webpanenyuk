@@ -4,18 +4,29 @@
 .navbar-brand {
     font: 32px Viga;
 }
+.navbar img.brand {
+    margin-top: -25px;
+    background: transparent;
+    width: 250px;
+    height: 100px;
+}
 .navbar {
-	width:100%;
+    width:100%;
+    /* color: rgb(10, 104, 42); */
 	position: absolute;
     top: 0;
     transition: .3s;
+    font-weight: bold;
+}
+.navbar .nav-link {
+    color: #AFE214;
 }
 .navbar.muncul {
 	position: fixed;
 	top: 0;
-    background-color: rgb(70, 143, 86);
-    color: white;
-	z-index: 999;
+    background-color: rgb(255, 255, 255);
+    /* color: rgb(10, 104, 42); */
+	z-index: 50;
 }
 
 
@@ -23,13 +34,14 @@
 
 /* Jumbotron */
 .jumbotron {
-    background: url(../img/jumbotron-bg.jpg);
-    background-size: cover;
-    height: 540px;
+    background: url(../img/gbrfrontpage.png);
+    /* background-size: cover; */
+    height: 640px;
     position: relative;
     z-index: -1;
     background-attachment: fixed;
     overflow: hidden;
+    background-position: -70px 55px;
 }
 
 .jumbotron::after {
@@ -51,6 +63,7 @@
 
 .jumbotron .display-4 {
     opacity: 0;
+    color: #eaeaea;
     transform: translate(0, -40px);
     transition: .5s;
     font-weight: 200;
@@ -67,23 +80,35 @@
 
 .jumbotron .display-4 span {
     font-weight: 500;
-    color: rgb(10, 165, 44);
+    color: rgb(201, 255, 7);
 }
 
+/* playstore */
+.playstore {
 
+}
 
 /* Info Panel */
 .info-panel {
     background-color: white;
     padding: 30px;
-    margin-top: -200px;
+    margin-top: -320px;
+    margin-bottom: 200px;
     border-radius: 12px;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.6);
+}
+.info-panel .col-lg img {
+    width: 100px;
+    height: 100px;
+}
+.info-panel .img-fluid {
+    background-color: #8CC63C;
 }
 .info-panel .col-lg {
     opacity: 0;
     transform: translate(0, -40px);
     transition: .5s;
+    width: 100px;
 }
 .info-panel .col-lg.info {
     opacity: 1;
@@ -91,31 +116,42 @@
 }
 
 .info-panel h4 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
-    text-transform: uppercase;
+    text-transform: capitalize;
+}
+.info-panel .lngkh {
+    font-size: 20px;
+}
+
+.info-panel header {
+    color: #AFE214;
+    font-size: 10px;
 }
 
 .info-panel p {
     font-size: 14px;
+    text-transform: capitalize;
     font-weight: lighter;
     color: #acacac;
 }
 
 
 
-/* about */
-.about {
-    margin-top: 120px;
+/* feature */
+.feature {
     text-align: center;
+    height: auto;
+    padding: 30px;
+    margin-top: -100px;
+}
+.feature #demo {
+    background-color: #AFE214;
+    width: 310;
 }
 
-.about img {
-    margin-bottom: 20px;
-}
-
-.about h2 {
+.feature h2 {
     opacity: 0;
     transform: translate(40px, 0);
     transition: .5s;
@@ -123,17 +159,17 @@
     text-transform: capitalize;
     font-weight: 200;
 }
-.about h2.showh2 {
+.feature h2.showh2 {
     opacity: 1;
     transform: translate(0, 0);
 }
 
-.about h2 span {
+.feature h2 span {
     font-weight: 500;
     text-transform: capitalize;
 }
 
-.about p {
+.feature p {
     opacity: 0;
     transform: translate(40px, 0);
     transition: .5s;
@@ -142,18 +178,27 @@
     font-weight: 200;
 }
 
-.about p.showp {
+.feature p.showp {
     opacity: 1;
     transform: translate(0, 0);
 }
-.about .carousel-inner img {
-    width: 600px;
-    height: 400px;
+.feature .carousel-inner img {
+    width: 319px;
+    height: 412px;
+    margin-left: 100px;
+    color: #8CC63C;
 }
 
 /* Testimonial */
 .gallery {
-    margin-top: 130px;
+    background: url(../img/gbrfrontpage.png);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 640px;
+    position: relative;
+    background-attachment: fixed;
+    overflow: hidden;
+    background-position: -70px 55px;
 }
 
 /* .gallery .card {
@@ -189,7 +234,7 @@
     text-align: center;
     line-height: 18rem;
     text-transform: uppercase;
-    color: rgb(10, 104, 42);
+    color: #AFE214;
     font-weight: bold;
 }
 .overlay {
@@ -200,7 +245,7 @@
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
-    z-index: 50;
+    z-index: 9999;
     transition: .3s;
     text-align: center;
     padding: 100px;
@@ -215,13 +260,14 @@
 
 .overlay img {
     max-height: 100%;
+    width: 50%;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, .5);
 }
 
 .overlay:target img {
     animation: zoomDanFade 1s;
 }
-.overlay .close {
+.overlay a.close {
     opacity: 0;
 }
 .overlay:target .close {
@@ -238,28 +284,56 @@
     animation: slideDownFade .5s  forwards;
 }
 .overlay:target .close:hover {
-    color: rgb(10, 104, 42);
+    color: white;
 }
 
 section {
-    margin-top: 130px;
+   padding-top: 130px;
 }
 /* Gallery */
-.gallery header, .contact header {
+.gallery header, .feature header, .panel header, .feature header {
     font-size: 2.4em;
     text-align: center;
     font-weight: 500;
     font-style: italic;
     margin-bottom: 30px;
+    color: #AFE214;
+    font-family: Viga;
 }
 
 /* footer */
 .footer {
-    width: auto;
+    background-color: #1C1E1D;
+    padding: 30px;
+    color: rgb(184, 184, 184);
+    overflow: hidden;
+    font: 16px Viga;
+}
+.footer .goplay {
+    width: 200px;
+}
+.footer ul {
+    list-style: none;
+    margin-left: -40px;
+}
+.footer span {
+    color: #AFE214;
+    font: 32px Viga;
+}
+.footer ul li {
+    display: inline-block;
+    padding-right: 10px;
 }
 .footer a {
     text-decoration: none;
-    color: rgb(10, 104, 42);
+    color: #AFE214;
+}
+.footer .card {
+    overflow: hidden;
+    height: 200px;
+}
+.footer .card img {
+    height: 200px;
 }
 /* footer */
 
@@ -309,6 +383,7 @@ section {
     text-transform: uppercase;
 }
 
+
 /* RESPONSIVE */
 @media (min-width: 992px) {
     .navbar {
@@ -316,11 +391,12 @@ section {
     }
     
     .navbar-brand, .nav-link {
-        color: white !important;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+        color: #AFE214;
+        /* text-shadow: 1px 1px 2px rgb(10, 104, 42); */
     }
 
     .nav-link {
+        color: #AFE214;
         text-transform: uppercase;
         margin-right: 20px;
     }
@@ -329,7 +405,7 @@ section {
     .nav-link.active::after {
         content: '';
         display: block;
-        border-bottom: 3px solid rgb(10, 165, 44);
+        border-bottom: 3px solid #AFE214;
         margin: auto;
         margin-bottom: -8px;
         width: 50%;
@@ -339,7 +415,7 @@ section {
 
     .jumbotron {
         margin-top: -90px;
-        height: 640px;
+        height: 670px;
     }
 
     .jumbotron .display-4 {
@@ -348,14 +424,14 @@ section {
     }
 
 
-    .about {
+    .feature {
         text-align: left;
     }
 
 
-    .testimonial p {
+    /* .testimonial p {
         font-size: 2em;
-    }
+    } */
 
 }
 

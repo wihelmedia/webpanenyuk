@@ -28,17 +28,18 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="#">Panen<span class="text-success"><em>Yuk</em></span></a>
+        <a class="navbar-brand" href="#home">
+          <img src="img/panenyuk.jpg" class="brand">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#about">About Us</a>
-            <a class="nav-item nav-link" href="#contact">Contact Us</a>
-            <a class="nav-item nav-link" href="#gallery">Sayur</a>
-            <a class="nav-item nav-link btn btn-success text-white tombol" href="#">Login</a>
+            <a class="nav-item nav-link" href="#feature">Our Features</a>
+            <a class="nav-item nav-link" href="#gallery">Our Product</a>
+            <!-- <a class="nav-item nav-link btn btn-success text-white tombol" href="#">Login</a> -->
           </div>
         </div>
       </div>
@@ -48,8 +49,9 @@
     <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-4">Quality <span>Fresh</span> <br>and <span>Vegetables</span> Here only!</h1>
-        <a href="#about" class="btn btn-success tombol"><i class="fas fa-arrow-circle-down"></i></a>
+        <!-- <h1 class="display-4">Quality <span>Fresh</span> <br>and <span>Vegetables</span> Here only!</h1> -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        </div>
       </div>
     </div>
     <!-- akhir Jumbotron -->
@@ -59,23 +61,29 @@
     <section class="container">
 
       <!-- info panel -->
-      <div class="row justify-content-center">
+      <div class="row justify-content-center panel">
         <div class="col-10 info-panel">
           <div class="row">
             <div class="col-lg">
-              <img src="img/employee.png" alt="Employee" class="img-fluid float-left">
-              <h4>24 Hours</h4>
-              <p>Admin online 24 Jam.</p>
+              <header>3 Langkah Mudah Membeli Sayur</header>
+            </div>
+          </div>
+          <!-- <img src="img/gbrfrontpage.png" /> -->
+          <div class="row">
+            <div class="col-lg">
+              <img src="img/cari.jpg" alt="Employee" class="img-fluid float-left">
+              <h4>Cari</h4>
+              <p>Cari sayur yang anda perlukan.</p>
             </div>
             <div class="col-lg">
-              <img src="img/hires.png" alt="HiRes" class="img-fluid float-left">
-              <h4>Fresh High Quality Vegetables</h4>
-              <p>Sayuran yang segar dan berkualitas.</p>
+              <img src="img/pesan.jpg" alt="HiRes" class="img-fluid float-left">
+              <h4>Pesan</h4>
+              <p>Pesan langsung sayur yang anda inginkan.</p>
             </div>
             <div class="col-lg">
-              <img src="img/security.png" alt="Security" class="img-fluid float-left">
-              <h4>Harvest Application</h4>
-              <p>Pesan hanya lewat aplikasi.</p>
+              <img src="img/antar.jpg" alt="Security" class="img-fluid float-left">
+              <h4>Antar</h4>
+              <p>Setelah di panen, sayur akan langsung diantarkan ke lokasi anda.</p>
             </div>
           </div>
         </div>
@@ -83,7 +91,7 @@
       <!-- akhir info panel -->
 
       <!-- Workingspace -->
-      <section class="about" id="about">
+      <section class="feature" id="feature">
         <div class="row">
           <div class="col-lg-6">
             <!-- <img src="img/workingspace.png" alt="Working Space" class="img-fluid"> -->
@@ -119,11 +127,29 @@
             
             </div>
           </div>
-          <div class="col-lg-5">
-            <h2>Beli Sayur.?? <span>PanenYuk</span> aja</h2>
-            <p>Bekerja dengan suasana hati yang lebih asik, menyenangkan
-              dan mempelajari hal baru setiap harinya.</p>
-            <a href="#" class="btn btn-success tombol">Download Aplikasi</a>
+          <div class="col-sm-6 d-block">
+            <div class="row">
+              <div class="col">
+                <header>3 Langkah Mudah Membeli Sayur</header>
+              </div>
+            </div>
+            <div class="row d-block">
+              <div class="col">
+                <img src="img/cari.jpg" alt="Employee" class="img-fluid float-left mr-3" width="75" height="90" style="color:#8CC63C">
+                <h4>Cari</h4>
+                <p>Cari sayur yang anda perlukan.</p>
+              </div>
+              <div class="col">
+                <img src="img/pesan.jpg" alt="HiRes" class="img-fluid float-left mr-3"  width="75" height="90">
+                <h4>Pesan</h4>
+                <p>Pesan langsung sayur yang anda inginkan.</p>
+              </div>
+              <div class="col">
+                <img src="img/antar.jpg" alt="Security" class="img-fluid float-left mr-3"  width="75" height="90">
+                <h4>Antar</h4>
+                <p>Setelah di panen, sayur akan langsung diantarkan ke lokasi anda.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -132,11 +158,11 @@
 
       <!-- Gallery -->
       <section id="gallery" class="gallery">
-        <div class="row justify-content-center">
+        <!-- <div class="row justify-content-center">
           <div class="col-lg-8">
             <header>Kinds Of Vegetables</header>
           </div>
-        </div>
+        </div> -->
         <div class="row">
           <div class="col-lg-4">
             <div class="card" style="width: 18rem;">
@@ -200,78 +226,48 @@
       </section>
       <!-- Gallery -->
 
-      <!-- Testimonial -->
-      <section class="testimonial" id="testimonial">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <p>"Bekerja dengan suasana hati yang lebih asik, menyenangkan
-              dan mempelajari hal baru setiap harinya."</p>
-          </div>
-        </div>
-      </section>
-      <!-- akhir Testimonial -->
-
-      <!-- contact us-->
-      <section id="contact" class="contact mb-5">
+      <section class="footer" id="footer">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <header>Contact Us</header>
-            </div>
-          </div>
-
-          <div class="row justify-content-center">
+          <div class="row">
             <div class="col-lg-4">
-              <div class="card text-white bg-success mb-3 text-center">
-                <div class="card-header">Contact Us</div>
-                <div class="card-body">
-                  <h5 class="card-title">Primary card title</h5>
-                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, ad.</p>
-                </div>
+              <div class="card" style="width: 18rem;">
+                <img src="img/panenyuk1.jpg" class="card-img-top" alt="...">
               </div>
-
-              <ul class="list-group">
-                <li class="list-group-item">Location</li>
-                <li class="list-group-item">My Office</li>
-                <li class="list-group-item">Jl. Durian</li>
-                <li class="list-group-item">East Kalimantan, Samarinda City</li>
-                <li class="list-group-item">Indonesia</li>
-              </ul>
             </div>
-
-            <div class="col-lg-6">
-              <form>
-                <div class="form-group">
-                  <label for="nama">Nama</label>
-                  <input type="text" class="form-control" id="nama" placeholder="Enter Nama">
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="text" class="form-control" id="email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="no_tlp">No. Telp</label>
-                  <input type="text" class="form-control" id="no_tlp" placeholder="Enter No.Telp">
-                </div>
-                <div class="form-group">
-                  <label for="no_tlp">Pesan</label>
-                  <textarea name="pesan" id="pesan" class="form-control"></textarea>
-                </div>
-                <div class="form-group">
-                  <button type="submit" class="btn btn-success">Kirim Pesan <i class="fas fa-arrow-alt-circle-right"></i></button>
-                </div>
-              </form>
+            <div class="col-lg-4">
+              <div class="row">
+                <h3>Follow Us On</h3>
+              </div>
+              <div class="row">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fab fa-facebook-f"></i>&nbsp;Facebook</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-twitter"></i></i>&nbsp; Twitter</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-instagram"></i></i>&nbsp; Instagram</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="row">
+                <h5>Download</h5>
+              </div>
+              <div class="row">
+                <a href="#">
+                  <img src="img/google-playstore.png" class="goplay">
+                </a>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- contact us-->
-
-      <section class="bg-secondary text-white text-center footer">
-        <div class="container">
-          <div class="row pt-3">
-            <div class="col">
-              <p>Copyright &copy; 2019 <a href="panenyuk.com">PanenYuk.com</a> All right reserved</p>
+            <div class="col-lg-4 hackcipta">
+              <div class="row">
+                <h5>About Us</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, modi.</p>
+              </div>
+              <div class="row">
+                  <p>&copy; 2019 Hak Cipta Terpelihara <span>PanenYuk.com</span></p>
+              </div>
             </div>
           </div>
         </div>
